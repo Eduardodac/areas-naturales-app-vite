@@ -1,0 +1,60 @@
+.button.p-button {
+    margin-right: 0.5rem;
+}
+.button.p-buttonset .p-button {
+    margin-right: 0;
+}
+.button .template .p-button i {
+    line-height: 2.25rem;
+}
+.button .template .p-button.youtube {
+    background: linear-gradient(to left, var(--pink-600) 50%, var(--pink-700) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease-out;
+    color: #fff;
+    border-color: var(--pink-700);
+}
+.button .template .p-button.youtube:hover {
+    background-position: left bottom;
+}
+.button .template .p-button.youtube i {
+    background-color: var(--pink-700);
+}
+.button .template .p-button.youtube:focus {
+    box-shadow: 0 0 0 1px var(--pink-400);
+}
+.button .template .p-button.facebook {
+    background: linear-gradient(to left, var(--indigo-600) 50%, var(--indigo-700) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease-out;
+    color: #fff;
+    border-color: var(--indigo-700);
+}
+.button .template .p-button.facebook:hover {
+    background-position: left bottom;
+}
+.button .template .p-button.facebook i {
+    background-color: var(--indigo-700);
+}
+.button .template .p-button.facebook:focus {
+    box-shadow: 0 0 0 1px var(--indigo-400);
+}
+.button .template .p-button.twitter {
+    background: linear-gradient(to left, var(--blue-400) 50%, var(--blue-500) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease-out;
+    color: #fff;
+    border-color: var(--blue-500);
+}
+.button .template .p-button.twitter:hover {
+    background-position: left bottom;
+}
+.button .template .p-button.twitter i {
+    background-color: var(--blue-500);
+}
+.button .template .p-button.twitter:focus {
+    box-shadow: 0 0 0 1px var(--blue-200);
+}
