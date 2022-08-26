@@ -21,17 +21,18 @@ const Rutas = () => {
 
     return (
         <>
-            <Dropdown 
-                className='w-1/2 my-5 mx-14 ring-green-400'
-                value={rutas} 
-                options={rutasItems} 
-                onChange={(e) => setRutas(e.value)} 
-                placeholder="Selecciona una Ruta"
-            />
-            <div className='flex flex-row justify-center h-auto items-center w-64 md:w-96 mx-auto p-auto'>
-                <img className= "" src={rutas}></img>
+            <div className='bg-slate-200 h-screen'>
+                <Dropdown 
+                    className='w-1/2 my-5 mx-14 ring-green-400'
+                    value={rutas} 
+                    options={rutasItems} 
+                    onChange={(e) => setRutas(e.value)} 
+                    placeholder="Selecciona una Ruta"
+                />
+                <div className='flex flex-row justify-center h-auto items-center w-64 md:w-96 mx-auto p-auto'>
+                    <img className= "" src={rutas}></img>
+                </div>
             </div>
-            
         </>
     );
 };
