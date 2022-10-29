@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import mapa from "../../assets/img/inicio/procesamientoIMG.png";
-import alegre from "../../assets/img/inicio/alegre.png";
-import feliz from "../../assets/img/inicio/feliz.png";
-import contento from "../../assets/img/inicio/contento.png";
-import RedesSociales from '../elementos/RedesSociales';
+import mapa from "../assets/img/inicio/procesamientoIMG.png";
+import alegre from "../assets/img/inicio/alegre.png";
+import feliz from "../assets/img/inicio/feliz.png";
+import contento from "../assets/img/inicio/contento.png";
+import RedesSociales from '../components/elementos/RedesSociales';
 
 const Inicio = () => {
     

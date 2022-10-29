@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Dropdown } from 'primereact/dropdown';
-import Mapa1 from "../../assets/img/analisis/Mapa1.png"
-import Mapa2 from "../../assets/img/analisis/Mapa2.png"
-import Nube1 from "../../assets/img/analisis/nubePalabras1.png"
-import Nube2 from "../../assets/img/analisis/nubePalabras2.png"
-import Pastel1 from "../../assets/img/analisis/pastel1.png"
-import Pastel2 from "../../assets/img/analisis/pastel2.png"
-import Boton from '../elementos/Boton';
+import Mapa1 from "../assets/img/analisis/Mapa1.png"
+import Mapa2 from "../assets/img/analisis/Mapa2.png"
+import Nube1 from "../assets/img/analisis/nubePalabras1.png"
+import Nube2 from "../assets/img/analisis/nubePalabras2.png"
+import Pastel1 from "../assets/img/analisis/pastel1.png"
+import Pastel2 from "../assets/img/analisis/pastel2.png"
 import { Button } from 'primereact/button';
 
 const Analisis = () => {
