@@ -21,7 +21,7 @@ const Rutas = () => {
 
     return (
         <>
-            <div className='bg-slate-200 h-screen'>
+            <div className=' h-screen'>
                 <Dropdown 
                     className='w-1/2 my-5 mx-14 ring-green-400'
                     value={rutas} 

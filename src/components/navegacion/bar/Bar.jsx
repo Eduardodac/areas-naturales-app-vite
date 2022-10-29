@@ -3,7 +3,7 @@ import { Toolbar } from 'primereact/toolbar';
 import Boton from '../../elementos/Boton';
 import { Avatar } from 'primereact/avatar';
 import IPN from "../../../assets/img/inicio/ipn.png"
-import lorem2 from "../../../assets/img/inicio/lorem2.jpg"
+import LogoCIC from "../../../assets/img/inicio/LogoCIC.png"
 
 const Bar = () => {
 
@@ -20,7 +20,7 @@ const Bar = () => {
     const rightNavbar = (
         <>
             <Avatar image={IPN} size="large"/>
-            <Avatar image={lorem2} size="large"/>
+            <Avatar image={LogoCIC} size="large"/>
         </>
     );
     
