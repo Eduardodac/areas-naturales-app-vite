@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Dropdown } from 'primereact/dropdown';
-import GaleryRow from '../components/elementos/GaleryRow';
+import GaleryRowCuxtal from '../components/elementos/GaleryRowCuxtal';
+import GaleryRowTehuacan from '../components/elementos/GaleryRowTehuacan';
 import { grupoFotos1, grupoFotos2 } from '../components/galeria/GaleryItems';
 
 const Galeria = () => {
@@ -8,8 +9,8 @@ const Galeria = () => {
     const [fotos, setFotos] = useState(grupoFotos1)
 
     const galeriaItems = [
-        {label: 'Primera Galería', value: '1'},
-        {label: 'Segunda Galería', value: '2'},
+        {label: 'Galería: Cuxtal', value: '1'},
+        {label: 'Galería: Tehuacan', value: '2'},
     ];
 
     useEffect(() =>{
@@ -24,6 +25,10 @@ const Galeria = () => {
         }
       }, [galeria]);
 
+      const Galeria = () => {
+            return galeria==='1' ? (<GaleryRowCuxtal imagenes = {fotos}></GaleryRowCuxtal>) : (<GaleryRowTehuacan imagenes = {fotos}></GaleryRowTehuacan>)
+      }
+
     return (
         <div className=' h-full w-full'>
             
@@ -32,9 +37,10 @@ const Galeria = () => {
                 value={galeria} 
                 options={galeriaItems} 
                 onChange={(e) => setGaleria(e.value)} 
-                placeholder="Primera Galería"/>
+                placeholder="Galería: Cuxtal"/>
 
-            <GaleryRow imagenes = {fotos}></GaleryRow>
+            {Galeria()}
+
             {/* <GaleryRow></GaleryRow> */}
  
         </div>
