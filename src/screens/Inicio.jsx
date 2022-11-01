@@ -19,7 +19,7 @@ const Inicio = () => {
                         Las Áreas Naturales Protegidas son áreas resguardadas para la conservación
                         de su biodiversidad, en las que recientemente se ha buscado implementar
                         estrategias que permitan aprovecharlas turísticamente de una forma sustentable. 
-                        El Procesamiento de Lenguaje Narutal es el campo dentro de las ciencias de la 
+                        El Procesamiento de Lenguaje Natural es el campo dentro de las ciencias de la 
                         computación que conjunta técnicas de inteligencia artificial con lingüistica y 
                         que, entre otras aplicaciones, permite analizar textos de forma automática.
                     </div>

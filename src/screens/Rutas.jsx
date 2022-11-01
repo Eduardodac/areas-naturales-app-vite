@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Dropdown } from 'primereact/dropdown';
-import ruta_baltica from "../assets/img/rutas/ruta_baltica.jpg";
-import ruta_mexpue from "../assets/img/rutas/ruta_mexpue.jpg";
-import ruta_panam from "../assets/img/rutas/ruta_panam.jpg";
+import ruta_Cuxtal from "../assets/img/rutas/ruta_Cuxtal.png";
+import ruta_Tehuacan from "../assets/img/rutas/ruta_Tehuacan.png";
+
 
 const Rutas = () => {
 
-    const [rutas, setRutas] = useState(ruta_panam);
+    const [rutas, setRutas] = useState(ruta_Cuxtal);
 
     const rutasItems = [
-        {label: 'Ruta Báltica', value: ruta_baltica},
-        {label: 'Ruta Mexico-Publa', value: ruta_mexpue},
-        {label: 'Ruta Panamericana', value: ruta_panam},
+        {label: 'Ruta Cuxtal', value: ruta_Cuxtal},
+        {label: 'Ruta Tehuacan', value: ruta_Tehuacan},
 
     ];
 
@@ -29,7 +28,7 @@ const Rutas = () => {
                     onChange={(e) => setRutas(e.value)} 
                     placeholder="Selecciona una Ruta"
                 />
-                <div className='flex flex-row justify-center h-auto items-center w-64 md:w-96 mx-auto p-auto'>
+                <div className='items-center w-96 md:w-175 mx-auto p-auto'>
                     <img className= "" src={rutas}></img>
                 </div>
             </div>
