@@ -1,97 +1,82 @@
 import React, { useEffect, useState } from 'react';
 import { Dropdown } from 'primereact/dropdown';
-import Mapa1 from "../assets/img/analisis/Mapa1.png"
-import Mapa2 from "../assets/img/analisis/Mapa2.png"
-import Nube1 from "../assets/img/analisis/nubePalabras1.png"
-import Nube2 from "../assets/img/analisis/nubePalabras2.png"
-import Pastel1 from "../assets/img/analisis/pastel1.png"
-import Pastel2 from "../assets/img/analisis/pastel2.png"
-import { Button } from 'primereact/button';
+import PastelCuxtal from "../assets/img/analisis/pastelCuxtal.png"
+import PastelTehuacan from "../assets/img/analisis/pastelTehuacan.png"
+import { NubesGaleriaCuxtal } from '../components/analisis/NubesGaleriaCuxtal';
+import { NubesGaleriaTehuacan} from '../components/analisis/NubesGaleriaTehuacan';
+import { MapaGaleriaCuxtal } from '../components/analisis/MapaGaleriaCuxtal';
 
 const Analisis = () => {
 
     const [analisis, setAnalisis] = useState('1');
     const [mapaNubePastel, setMapaNubePastel] = useState({
-        mapa : Mapa1,
-        nube : Nube1,
-        pastel : Pastel1,
-        width : "75%",
+        nombre: "Cuxtal",
+        pastel: PastelCuxtal,
+        comentario: "positivo"
     })
 
     const analisisItems = [
-        {label: 'Primer Análisis', value: '1'},
-        {label: 'Segundo Análisis', value: '2'},
+        { label: 'Cuxtal', value: '1' },
+        { label: 'Tehuacan', value: '2' },
     ];
 
-    useEffect(() =>{
-        document.title= `Análisis`
-      }, []);
+    useEffect(() => {
+        document.title = `Análisis`
+    }, []);
 
-      useEffect(() =>{
-        if (analisis === '1'){
+    useEffect(() => {
+        if (analisis === '1') {
             setMapaNubePastel({
-                mapa : Mapa1,
-                nube : Nube1,
-                pastel : Pastel1,
-                width : "75%"   
+                nombre: "Cuxtal",
+                pastel: PastelCuxtal,
+                comentario: "positivo"
             })
-        }else {
+        } else {
             setMapaNubePastel({
-                mapa : Mapa2,
-                nube : Nube2,
-                pastel : Pastel2,
-                width : "50%"     
+                nombre: "Tehuacan",
+                pastel: PastelTehuacan,
+                comentario: "negativo"
             })
         }
-        console.log("mapaNubePastel", mapaNubePastel)
-      }, [analisis]);
+    }, [analisis]);
 
     return (
         <div>
-            <Dropdown 
+            <Dropdown
                 className='w-1/2 my-5 mx-14 ring-green-400'
-                value={analisis} 
-                options={analisisItems} 
-                onChange={(e) => setAnalisis(e.value)} 
-                placeholder="Selecciona un Análisis"/>
+                value={analisis}
+                options={analisisItems}
+                onChange={(e) => setAnalisis(e.value)}
+                placeholder="Selecciona un Análisis" />
 
-            <div className='flex flex-col md:flex-row items-center'>
-                <div className='flex flex-col basis-1/3 items-center'>
-                    <div className='my-10 md:my-0' style={{width:"95%", height:"60%"}}>
-                        <img src={mapaNubePastel.mapa}/>
-                    </div>
+            <div className='flex flex-col md:flex-row h-96 mx-4'>
+                <div className='flex flex-col basis-1/3 '>
+                    {/* <div className='my-10 md:my-0'>
+                        <img className='w-full h-96' src={mapaNubePastel.mapa} />
+                    </div> */}
+                    <MapaGaleriaCuxtal/>
                 </div>
-                <div className='flex flex-col h-96 md:h-64 lg:h-80 basis-full md:basis-1/3 my-10 md:my-0 items-center justify-around'>
-                    <b>Total de Comentarios Obtenidos: </b>
+                <div className='flex flex-col h-full md:h-64 lg:h-80 basis-full md:basis-1/3 my-10 md:my-0 items-center'>
+                    <span className='w-full text-center'><b>Total de Comentarios Obtenidos: </b></span>
                     <span>Youtube 480</span>
-                    <div className='my-10 md:my-0' style={{width: mapaNubePastel.width, height:"60%"}}>
-                        <img src={mapaNubePastel.pastel}/>
+                    <div className='my-10 md:my-5'>
+                        <img className='w-80' src={mapaNubePastel.pastel} />
                     </div>
-                    <Button className='w-56' label="Análisis de la gráfica"></Button>
                 </div>
+
                 <div className=' flex flex-col basis-1/3 items-center'>
-                    <b>Total de Comentarios Obtenidos: </b>
-                    <span>Youtube 480</span>
-                    <div className='my-10 md:my-auto' style={{width: mapaNubePastel.width, height:"45%"}}>
-                        <img src={mapaNubePastel.nube}/>
-                    </div>
-                    
+                    <b>Fecha de Actualización: Octubre 2022</b>
+                    <span className='w-full text-center'>{"Palabras frecuentes identificadas en comentarios " + mapaNubePastel.comentario}</span>
+                    {/* <div className='my-10 md:my-5'>
+                        <img className = "w-72" src={mapaNubePastel.nube} />
+                    </div> */}
+
+                    {mapaNubePastel.nombre==="Cuxtal"? NubesGaleriaCuxtal(): NubesGaleriaTehuacan()}
+
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
 export default Analisis;
-
-
-const colorVerde = {
-    background: "green"
-}
-const colorRed = {
-    background: "red"
-}
-const size = {
-    width: "75%",
-    height: "60%",
-}
