@@ -26,7 +26,9 @@ const Galeria = () => {
       }, [galeria]);
 
       const Galeria = () => {
-            return galeria==='1' ? (<GaleryRowCuxtal imagenes = {fotos}></GaleryRowCuxtal>) : (<GaleryRowTehuacan imagenes = {fotos}></GaleryRowTehuacan>)
+            return galeria==='1' ? 
+              (<GaleryRowCuxtal imagenes = {fotos}></GaleryRowCuxtal>) 
+            : (<GaleryRowTehuacan imagenes = {fotos}></GaleryRowTehuacan>)
       }
 
     return (
